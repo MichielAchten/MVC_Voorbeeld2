@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "AndereNaam";
+}
+
+<h2>AndereNaam</h2>
+
+<h1>@(1 + 2 * 5 + 0.5)</h1>
+
+@for (var teller = 0; teller < 10; teller++)
+{
+    @teller<br />
+}
+
+@{
+    <h2>Countdown</h2>
+    var getal = 10;
+    while (getal > 0)
+    {
+        <p>@getal</p>
+        getal--;
+    }
+}
+
+Het resultaat van (1+2*5+0.5) is @(1 + 2 * 5 + 0.5)
+
+<br />
+
+Dit is het @@-teken
+
+<br />
+
+@if(new Random().Next(1, 11) == 7)
+{
+    <text>Het is zeven</text>
+    @: Je hebt geluk
+}
+else
+{ 
+    <text>Het is geen zeven</text>
+    @: Een andere keer Misschien
+}
+
+@{
+    var getal1 = 0;
+    var getal2 = 1;
+    var som = 0;
+    <p>@getal1</p>
+
+    for (int i = 0; i < 11; i++)
+    {
+        som = getal1 + getal2;
+        getal1 = getal2;
+        getal2 = som;
+        <p>@getal1</p>
+    }
+}
